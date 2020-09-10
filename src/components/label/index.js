@@ -43,7 +43,7 @@ export default class Label extends PureComponent {
       y1: PropTypes.number,
     }),
 
-    style: Animated.Text.propTypes.style,
+    style: PropTypes.any,
     label: PropTypes.string,
   };
 
@@ -79,7 +79,7 @@ export default class Label extends PureComponent {
         });
 
     let textStyle = {
-      lineHeight: fontSize,
+      lineHeight: style && typeof style.lineHeight === 'number' ? style.lineHeight : fontSize,
       fontSize,
       color,
     };

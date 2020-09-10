@@ -10,8 +10,9 @@ export default class Helper extends PureComponent {
     error: PropTypes.string,
 
     disabled: PropTypes.bool,
+    errorMessageHidden: PropTypes.bool,
 
-    style: Animated.Text.propTypes.style,
+    style: PropTypes.any,
 
     baseColor: PropTypes.string,
     errorColor: PropTypes.string,
@@ -68,6 +69,7 @@ export default class Helper extends PureComponent {
       title,
       error,
       disabled,
+      errorMessageHidden,
       baseColor,
       errorColor,
     } = this.props;
@@ -76,7 +78,7 @@ export default class Helper extends PureComponent {
       error:
       title;
 
-    if (null == text) {
+    if (errorMessageHidden || null == text) {
       return null;
     }
 

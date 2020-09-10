@@ -2,9 +2,15 @@
 
 exports[`renders 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -58,7 +64,7 @@ exports[`renders 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -73,7 +79,7 @@ exports[`renders 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -161,9 +167,15 @@ exports[`renders 1`] = `
 
 exports[`renders counter 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -217,7 +229,7 @@ exports[`renders counter 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -232,7 +244,7 @@ exports[`renders counter 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -343,9 +355,15 @@ exports[`renders counter 1`] = `
 
 exports[`renders default value 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -399,7 +417,7 @@ exports[`renders default value 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -414,7 +432,7 @@ exports[`renders default value 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -502,9 +520,15 @@ exports[`renders default value 1`] = `
 
 exports[`renders disabled value 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="none"
 >
   <View
     style={
@@ -558,7 +582,7 @@ exports[`renders disabled value 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -573,7 +597,7 @@ exports[`renders disabled value 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -661,9 +685,15 @@ exports[`renders disabled value 1`] = `
 
 exports[`renders error 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -717,7 +747,7 @@ exports[`renders error 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -732,7 +762,7 @@ exports[`renders error 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -837,9 +867,15 @@ exports[`renders error 1`] = `
 
 exports[`renders left accessory 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -894,7 +930,7 @@ exports[`renders left accessory 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -909,7 +945,7 @@ exports[`renders left accessory 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -997,9 +1033,15 @@ exports[`renders left accessory 1`] = `
 
 exports[`renders multiline value 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1053,7 +1095,7 @@ exports[`renders multiline value 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1068,7 +1110,7 @@ exports[`renders multiline value 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -1162,9 +1204,15 @@ exports[`renders multiline value 1`] = `
 
 exports[`renders prefix 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1218,7 +1266,7 @@ exports[`renders prefix 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1233,7 +1281,7 @@ exports[`renders prefix 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -1262,31 +1310,28 @@ exports[`renders prefix 1`] = `
           }
         }
       >
-        <View
+        <Text
           style={
-            Object {
-              "height": 24,
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingRight": 8,
-              "top": 2,
-            }
-          }
-        >
-          <Text
-            style={
+            Array [
+              Object {
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "height": 24,
+                "paddingRight": 8,
+              },
+              undefined,
               Object {
                 "color": "rgba(0, 0, 0, .38)",
                 "fontSize": 16,
-                "includeFontPadding": false,
                 "textAlign": "left",
-                "textAlignVertical": "top",
-              }
-            }
-          >
-            $
-          </Text>
-        </View>
+              },
+            ]
+          }
+        >
+          $
+        </Text>
         <TextInput
           allowFontScaling={true}
           autoCapitalize="sentences"
@@ -1346,9 +1391,15 @@ exports[`renders prefix 1`] = `
 
 exports[`renders restriction 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1402,7 +1453,7 @@ exports[`renders restriction 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1417,7 +1468,7 @@ exports[`renders restriction 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -1528,9 +1579,15 @@ exports[`renders restriction 1`] = `
 
 exports[`renders right accessory 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1584,7 +1641,7 @@ exports[`renders right accessory 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1599,7 +1656,7 @@ exports[`renders right accessory 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -1688,9 +1745,15 @@ exports[`renders right accessory 1`] = `
 
 exports[`renders suffix 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1744,7 +1807,7 @@ exports[`renders suffix 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1759,7 +1822,7 @@ exports[`renders suffix 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -1823,31 +1886,28 @@ exports[`renders suffix 1`] = `
           underlineColorAndroid="transparent"
           value="text"
         />
-        <View
+        <Text
           style={
-            Object {
-              "height": 24,
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingLeft": 8,
-              "top": 2,
-            }
-          }
-        >
-          <Text
-            style={
+            Array [
+              Object {
+                "textAlignVertical": "top",
+                "top": 2,
+              },
+              Object {
+                "height": 24,
+                "paddingLeft": 8,
+              },
+              undefined,
               Object {
                 "color": "rgba(0, 0, 0, .38)",
                 "fontSize": 16,
-                "includeFontPadding": false,
                 "textAlign": "right",
-                "textAlignVertical": "top",
-              }
-            }
-          >
-            .com
-          </Text>
-        </View>
+              },
+            ]
+          }
+        >
+          .com
+        </Text>
       </View>
     </View>
   </View>
@@ -1872,9 +1932,15 @@ exports[`renders suffix 1`] = `
 
 exports[`renders title 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -1928,7 +1994,7 @@ exports[`renders title 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -1943,7 +2009,7 @@ exports[`renders title 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >
@@ -2048,9 +2114,15 @@ exports[`renders title 1`] = `
 
 exports[`renders value 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
   onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  pointerEvents="auto"
 >
   <View
     style={
@@ -2104,7 +2176,7 @@ exports[`renders value 1`] = `
       <View
         style={
           Object {
-            "left": "-100%",
+            "left": "-50%",
             "paddingLeft": "50%",
             "position": "absolute",
             "top": 0,
@@ -2119,7 +2191,7 @@ exports[`renders value 1`] = `
                 "translateX": 0,
               },
             ],
-            "width": "200%",
+            "width": "100%",
           }
         }
       >

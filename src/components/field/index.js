@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import {
   View,
-  Text,
   TextInput,
   Animated,
   StyleSheet,
   Platform,
-  ViewPropTypes,
+  TouchableWithoutFeedback,
 } from 'react-native';
 
 import Line from '../line';
@@ -25,10 +24,10 @@ function startAnimation(animation, options, callback) {
 }
 
 function labelStateFromProps(props, state) {
-  let { placeholder, defaultValue } = props;
+  let { placeholder, defaultValue, inactivePlaceholder } = props;
   let { text, receivedFocus } = state;
 
-  return !!(placeholder || text || (!receivedFocus && defaultValue));
+  return !!((inactivePlaceholder && placeholder) || text || (!receivedFocus && defaultValue));
 }
 
 function errorStateFromProps(props, state) {
@@ -63,11 +62,11 @@ export default class TextField extends PureComponent {
     disabledLineType: 'dotted',
 
     disabled: false,
+    inactivePlaceholder: true,
+    errorMessageHidden: false,
   };
 
   static propTypes = {
-    ...TextInput.propTypes,
-
     animationDuration: PropTypes.number,
 
     fontSize: PropTypes.number,
@@ -84,13 +83,14 @@ export default class TextField extends PureComponent {
 
     labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: Text.propTypes.style,
-    titleTextStyle: Text.propTypes.style,
-    affixTextStyle: Text.propTypes.style,
+    labelTextStyle: PropTypes.any,
+    titleTextStyle: PropTypes.any,
+    affixTextStyle: PropTypes.any,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    inactiveLineColor: PropTypes.string,
 
     label: PropTypes.string,
     title: PropTypes.string,
@@ -99,6 +99,7 @@ export default class TextField extends PureComponent {
 
     error: PropTypes.string,
     errorColor: PropTypes.string,
+    errorMessageHidden: PropTypes.bool,
 
     lineWidth: PropTypes.number,
     activeLineWidth: PropTypes.number,
@@ -109,6 +110,8 @@ export default class TextField extends PureComponent {
 
     disabled: PropTypes.bool,
 
+    defaultValue: PropTypes.string,
+
     formatText: PropTypes.func,
 
     renderLeftAccessory: PropTypes.func,
@@ -117,8 +120,10 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    inactivePlaceholder: PropTypes.bool,
+
+    containerStyle: PropTypes.any,
+    inputContainerStyle: PropTypes.any,
   };
 
   static inputContainerStyle = styles.inputContainer;
@@ -224,6 +229,7 @@ export default class TextField extends PureComponent {
     let options = {
       toValue: this.focusState(),
       duration,
+      useNativeDriver: false,
     };
 
     startAnimation(focusAnimation, options, this.onFocusAnimationEnd);
@@ -451,15 +457,11 @@ export default class TextField extends PureComponent {
 
   inputProps() {
     let store = {};
-
-    for (let key in TextInput.propTypes) {
-      if ('defaultValue' === key) {
+    for (let key in this.props) {
+      if (TextField.propTypes[key]) {
         continue;
       }
-
-      if (key in this.props) {
-        store[key] = this.props[key];
-      }
+      store[key] = this.props[key];
     }
 
     return store;
@@ -509,7 +511,7 @@ export default class TextField extends PureComponent {
         activeFontSize={labelFontSize}
         offset={offset}
         label={label}
-        style={labelTextStyle}
+        style={StyleSheet.flatten(labelTextStyle)}
       />
     );
   }
@@ -529,7 +531,6 @@ export default class TextField extends PureComponent {
   }
 
   renderAffix(type) {
-    let { labelAnimation } = this.state;
     let {
       [type]: affix,
       fontSize,
@@ -546,7 +547,6 @@ export default class TextField extends PureComponent {
       style,
       color,
       fontSize,
-      labelAnimation,
     };
 
     return (
@@ -562,6 +562,7 @@ export default class TextField extends PureComponent {
       disabled,
       baseColor,
       errorColor,
+      errorMessageHidden,
       titleTextStyle: style,
       characterRestriction: limit,
     } = this.props;
@@ -591,6 +592,7 @@ export default class TextField extends PureComponent {
       ...styleProps,
       title,
       error,
+      errorMessageHidden,
       disabled,
       focusAnimation,
     };
@@ -643,11 +645,13 @@ export default class TextField extends PureComponent {
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
+      inactiveLineColor,
       tintColor,
       baseColor,
       errorColor,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
+      inactivePlaceholder,
     } = this.props;
 
     let restricted = this.isRestricted();
@@ -661,12 +665,10 @@ export default class TextField extends PureComponent {
       height: this.inputContainerHeight(),
     };
 
-    let containerProps = {
-      style: containerStyle,
-      onStartShouldSetResponder: () => true,
-      onResponderRelease: this.onPress,
+    let touchableProps = {
+      onPress: this.onPress,
       pointerEvents: !disabled && editable?
-        'auto':
+        'box-none':
         'none',
     };
 
@@ -697,32 +699,36 @@ export default class TextField extends PureComponent {
       lineWidth,
       activeLineWidth,
       disabledLineWidth,
+      inactiveLineColor,
 
       lineType,
       disabledLineType,
     };
 
     return (
-      <View {...containerProps}>
-        <Animated.View {...inputContainerProps}>
-          {this.renderLine(lineProps)}
-          {this.renderAccessory('renderLeftAccessory')}
+      <TouchableWithoutFeedback {...touchableProps}>
+        <View style={containerStyle}>
+          <Animated.View {...inputContainerProps}>
+            {this.renderLine(lineProps)}
+            {this.renderAccessory('renderLeftAccessory')}
 
-          <View style={styles.stack}>
-            {this.renderLabel(styleProps)}
+            <View style={styles.stack}>
+              {this.renderLabel(styleProps)}
 
-            <View style={styles.row}>
-              {this.renderAffix('prefix')}
-              {this.renderInput()}
-              {this.renderAffix('suffix')}
+              <Animated.View
+                style={[styles.row, !inactivePlaceholder && { opacity: labelAnimation }]}>
+                {this.renderAffix('prefix')}
+                {this.renderInput()}
+                {this.renderAffix('suffix')}
+              </Animated.View>
             </View>
-          </View>
 
-          {this.renderAccessory('renderRightAccessory')}
-        </Animated.View>
+            {this.renderAccessory('renderRightAccessory')}
+          </Animated.View>
 
-        {this.renderHelper()}
-      </View>
+          {this.renderHelper()}
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }

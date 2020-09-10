@@ -4,7 +4,7 @@ exports[`renders active errored label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -19,7 +19,7 @@ exports[`renders active errored label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -45,7 +45,7 @@ exports[`renders active focused label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -60,7 +60,7 @@ exports[`renders active focused label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -86,7 +86,7 @@ exports[`renders active label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -101,7 +101,7 @@ exports[`renders active label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -129,7 +129,7 @@ exports[`renders errored label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -144,7 +144,7 @@ exports[`renders errored label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -170,7 +170,7 @@ exports[`renders label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -185,7 +185,7 @@ exports[`renders label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -211,7 +211,7 @@ exports[`renders restricted label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -226,7 +226,7 @@ exports[`renders restricted label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
@@ -252,7 +252,7 @@ exports[`renders styled label 1`] = `
 <View
   style={
     Object {
-      "left": "-100%",
+      "left": "-50%",
       "paddingLeft": "50%",
       "position": "absolute",
       "top": 0,
@@ -267,7 +267,7 @@ exports[`renders styled label 1`] = `
           "translateX": 0,
         },
       ],
-      "width": "200%",
+      "width": "100%",
     }
   }
 >
