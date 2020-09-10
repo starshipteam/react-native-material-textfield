@@ -1,113 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders inactive prefix 1`] = `
-<View
+<Text
   style={
-    Object {
-      "height": 24,
-      "justifyContent": "center",
-      "opacity": 0,
-      "paddingRight": 8,
-      "top": 2,
-    }
-  }
->
-  <Text
-    style={
+    Array [
+      Object {
+        "textAlignVertical": "top",
+        "top": 2,
+      },
+      Object {
+        "height": 24,
+        "paddingRight": 8,
+      },
+      undefined,
       Object {
         "color": "black",
         "fontSize": 16,
-        "includeFontPadding": false,
         "textAlign": "left",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    a
-  </Text>
-</View>
+      },
+    ]
+  }
+>
+  a
+</Text>
 `;
 
 exports[`renders inactive suffix 1`] = `
-<View
+<Text
   style={
-    Object {
-      "height": 24,
-      "justifyContent": "center",
-      "opacity": 0,
-      "paddingLeft": 8,
-      "top": 2,
-    }
-  }
->
-  <Text
-    style={
+    Array [
+      Object {
+        "textAlignVertical": "top",
+        "top": 2,
+      },
+      Object {
+        "height": 24,
+        "paddingLeft": 8,
+      },
+      undefined,
       Object {
         "color": "black",
         "fontSize": 16,
-        "includeFontPadding": false,
         "textAlign": "right",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    z
-  </Text>
-</View>
+      },
+    ]
+  }
+>
+  z
+</Text>
 `;
 
 exports[`renders prefix 1`] = `
-<View
+<Text
   style={
-    Object {
-      "height": 24,
-      "justifyContent": "center",
-      "opacity": 1,
-      "paddingRight": 8,
-      "top": 2,
-    }
-  }
->
-  <Text
-    style={
+    Array [
+      Object {
+        "textAlignVertical": "top",
+        "top": 2,
+      },
+      Object {
+        "height": 24,
+        "paddingRight": 8,
+      },
+      undefined,
       Object {
         "color": "black",
         "fontSize": 16,
-        "includeFontPadding": false,
         "textAlign": "left",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    a
-  </Text>
-</View>
+      },
+    ]
+  }
+>
+  a
+</Text>
 `;
 
 exports[`renders suffix 1`] = `
-<View
+<Text
   style={
-    Object {
-      "height": 24,
-      "justifyContent": "center",
-      "opacity": 1,
-      "paddingLeft": 8,
-      "top": 2,
-    }
-  }
->
-  <Text
-    style={
+    Array [
+      Object {
+        "textAlignVertical": "top",
+        "top": 2,
+      },
+      Object {
+        "height": 24,
+        "paddingLeft": 8,
+      },
+      undefined,
       Object {
         "color": "black",
         "fontSize": 16,
-        "includeFontPadding": false,
         "textAlign": "right",
-        "textAlignVertical": "top",
-      }
-    }
-  >
-    z
-  </Text>
-</View>
+      },
+    ]
+  }
+>
+  z
+</Text>
 `;
