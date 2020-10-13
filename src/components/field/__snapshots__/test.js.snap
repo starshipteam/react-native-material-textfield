@@ -2,7 +2,7 @@
 
 exports[`renders 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -167,7 +167,7 @@ exports[`renders 1`] = `
 
 exports[`renders counter 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -355,7 +355,7 @@ exports[`renders counter 1`] = `
 
 exports[`renders default value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -520,7 +520,7 @@ exports[`renders default value 1`] = `
 
 exports[`renders disabled value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -685,7 +685,7 @@ exports[`renders disabled value 1`] = `
 
 exports[`renders error 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -867,7 +867,7 @@ exports[`renders error 1`] = `
 
 exports[`renders left accessory 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1033,7 +1033,7 @@ exports[`renders left accessory 1`] = `
 
 exports[`renders multiline value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1204,7 +1204,7 @@ exports[`renders multiline value 1`] = `
 
 exports[`renders prefix 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1391,7 +1391,7 @@ exports[`renders prefix 1`] = `
 
 exports[`renders restriction 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1579,7 +1579,7 @@ exports[`renders restriction 1`] = `
 
 exports[`renders right accessory 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1745,7 +1745,7 @@ exports[`renders right accessory 1`] = `
 
 exports[`renders suffix 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -1932,7 +1932,7 @@ exports[`renders suffix 1`] = `
 
 exports[`renders title 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -2114,7 +2114,7 @@ exports[`renders title 1`] = `
 
 exports[`renders value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}

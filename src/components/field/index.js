@@ -666,6 +666,7 @@ export default class TextField extends PureComponent {
     };
 
     let touchableProps = {
+      accessible: false,
       onPress: this.onPress,
       pointerEvents: !disabled && editable?
         'box-none':

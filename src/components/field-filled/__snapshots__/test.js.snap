@@ -2,7 +2,7 @@
 
 exports[`renders 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -170,7 +170,7 @@ exports[`renders 1`] = `
 
 exports[`renders accessory 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -339,7 +339,7 @@ exports[`renders accessory 1`] = `
 
 exports[`renders counter 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -530,7 +530,7 @@ exports[`renders counter 1`] = `
 
 exports[`renders disabled value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -698,7 +698,7 @@ exports[`renders disabled value 1`] = `
 
 exports[`renders title 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -883,7 +883,7 @@ exports[`renders title 1`] = `
 
 exports[`renders value 1`] = `
 <View
-  accessible={true}
+  accessible={false}
   focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
