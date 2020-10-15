@@ -200,6 +200,9 @@ export default class TextField extends PureComponent {
 
   componentDidMount() {
     this.mounted = true;
+    if (Platform.OS === 'web' && !this.focused && this.props.autoFocus) {
+      this.setFocused();
+    }
   }
 
   componentWillUnmount() {
@@ -315,6 +318,18 @@ export default class TextField extends PureComponent {
     this.setState({ text });
   }
 
+  setFocused() {
+    let { receivedFocus } = this.state;
+
+    this.focused = true;
+    this.startFocusAnimation();
+    this.startLabelAnimation();
+
+    if (!receivedFocus) {
+      this.setState({ receivedFocus: true, text: this.value() });
+    }
+  }
+
   isFocused() {
     let { current: input } = this.inputRef;
 
@@ -351,7 +366,6 @@ export default class TextField extends PureComponent {
 
   onFocus(event) {
     let { onFocus, clearTextOnFocus } = this.props;
-    let { receivedFocus } = this.state;
 
     if ('function' === typeof onFocus) {
       onFocus(event);
@@ -361,14 +375,7 @@ export default class TextField extends PureComponent {
       this.clear();
     }
 
-    this.focused = true;
-
-    this.startFocusAnimation();
-    this.startLabelAnimation();
-
-    if (!receivedFocus) {
-      this.setState({ receivedFocus: true, text: this.value() });
-    }
+    this.setFocused();
   }
 
   onBlur(event) {
