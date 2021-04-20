@@ -98,9 +98,17 @@ declare module 'react-native-material-textfield' {
          */
         focus(): void;
         /*
+         * Set focused style
+         */
+        setFocused(): void;
+        /*
          * Release focus
          */
         blur(): void;
+        /*
+         * Set blurred style
+         */
+        setBlurred(): void;
         /*
          * Clear text field
          */

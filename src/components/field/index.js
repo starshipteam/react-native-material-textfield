@@ -330,6 +330,12 @@ export default class TextField extends PureComponent {
     }
   }
 
+  setBlurred() {
+    this.focused = false;
+    this.startFocusAnimation();
+    this.startLabelAnimation();
+  }
+
   isFocused() {
     let { current: input } = this.inputRef;
 
@@ -385,10 +391,7 @@ export default class TextField extends PureComponent {
       onBlur(event);
     }
 
-    this.focused = false;
-
-    this.startFocusAnimation();
-    this.startLabelAnimation();
+    this.setBlurred();
   }
 
   onChange(event) {
