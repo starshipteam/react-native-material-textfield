@@ -201,7 +201,7 @@ export default class TextField extends PureComponent {
   componentDidMount() {
     this.mounted = true;
     if (Platform.OS === 'web' && !this.focused && this.props.autoFocus) {
-      this.setFocused();
+      this.focus();
     }
   }
 
@@ -277,7 +277,8 @@ export default class TextField extends PureComponent {
     let { disabled, editable } = this.props;
     let { current: input } = this.inputRef;
 
-    if (!disabled && editable) {
+    if (!disabled && editable && !this.focused) {
+      this.setFocused();
       input.focus();
     }
   }
@@ -320,6 +321,10 @@ export default class TextField extends PureComponent {
 
   setFocused() {
     let { receivedFocus } = this.state;
+
+    if (this.focused) {
+      return;
+    }
 
     this.focused = true;
     this.startFocusAnimation();
@@ -468,7 +473,7 @@ export default class TextField extends PureComponent {
   inputProps() {
     let store = {};
     for (let key in this.props) {
-      if (TextField.propTypes[key]) {
+      if (TextField.propTypes && TextField.propTypes[key]) {
         continue;
       }
       store[key] = this.props[key];
